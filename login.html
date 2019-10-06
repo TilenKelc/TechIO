@@ -58,9 +58,9 @@
         <div class="col-md form">
             <form method="" action="" class="login-form">
                 <label>Email</label>
-                <input type="text" required><br>
+                <input type="email" required name="email"><br>
                 <label>Password</label>
-                <input type="password" required><br>
+                <input type="password" required name="passwordLogin"><br>
                 <input type="submit" value="Send"><br>
                 <a onclick="Change(0)">Sign In</a>
             </form> 
@@ -70,9 +70,9 @@
               <label>Email</label>
               <input type="text" required><br>
               <label>Password</label>
-              <input type="password" required><br>
+              <input type="password" required name="password"><br>
               <label>Confirm Password</label>
-              <input type="password" required><br>
+              <input type="password" required name="password_check"><br>
               <input type="submit" value="Send"><br>
               <a onclick="Change(1)">Join</a>
           </form> 
@@ -113,6 +113,42 @@
       }else{
         login.style.display = "block";
         reg.style.display = "none";
+      }
+    }
+
+    var timer = null;
+    $('input[name=password]').keydown(function(){
+      clearTimeout(timer); 
+      timer = setTimeout(CheckPasswords, 500);
+    });
+    $('input[name=password_check]').keydown(function(){
+      clearTimeout(timer); 
+      timer = setTimeout(CheckPasswords, 500);
+    });
+    var CheckPasswords = function(){
+      var password_1 = document.getElementsByName("password")[0].value;
+      var password_2 = document.getElementsByName("password_check")[0].value;
+      if(password_1 !== password_2){
+        alert("Passwords do not match");
+      }
+    }
+
+    var timerLogin = null;
+    $('input[name=email]').keydown(function(){
+      clearTimeout(timerLogin); 
+      timerLogin = setTimeout(CheckLogin, 1000);
+    });
+    $('input[name=passwordLogin]').keydown(function(){
+      clearTimeout(timerLogin); 
+      timerLogin = setTimeout(CheckLogin, 500);
+    });
+    var CheckLogin = function(){
+      var email = document.getElementsByName("email")[0].value;
+      var password = document.getElementsByName("passwordLogin")[0].value;
+      if(email === "tilen.kelc@gmail.com" && password === "123"){
+        location.href="index.html";
+      }else{
+        alert("Incorrect login");
       }
     }
   </script>
