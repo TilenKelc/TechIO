@@ -10,6 +10,74 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ .item:last-of-type{
+  background-color: white;
+  color: #17a2b8;
+ }
+ .item:first-of-type{
+  background-color: white;
+  color: #17a2b8;
+ }
+ .name-check{
+   position: absolute;
+   right: 5%;
+ }
+ .numbers-all{
+   position: absolute;
+   left: 59%;
+ }
+ .cost-all{
+   position: absolute;
+   left: 70%;
+ }
+ .delete{
+   position: absolute;
+   right: 20px;
+ }
+ .edit{
+   position: absolute;
+   right: 110px;
+ }
+ .costs-all{
+   position: absolute;
+   right: 60%;
+ }
+ .numbers{
+   position: absolute;
+   left: 57.5%;
+ }
+ .number{
+   position: absolute;
+   left: 60%;
+ }
+ .name{
+   width: 50% !important;
+ }
+ .cost{
+   position: absolute;
+   left: 70%;
+ }
+ .items{
+   width: 100%;
+   padding: 50px;
+   background-color: #17a2b8;
+   color: white;
+   border-radius: 30px;
+   font-size: 20px;
+ }
+ .item{
+   width: 100%;
+   border-top: 1px white solid;
+   border-right: 1px white solid;
+   border-left: 1px white solid;
+   padding: 15px;
+   position: relative;
+ }
+ .item:last-of-type{
+  width: 100%;
+  border-bottom: 1px white solid;
+  padding: 15px;
+}
 .active{
   color: #fff !important;
   background: #1abc9c !important;
